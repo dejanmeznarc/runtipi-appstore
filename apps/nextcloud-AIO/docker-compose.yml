@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   nextcloud:
-    container_name: nextcloud
+    container_name: nextcloud_aoi
     image: nextcloud:25.0.12-apache
     restart: unless-stopped
     ports:
