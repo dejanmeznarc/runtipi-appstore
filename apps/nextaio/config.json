@@ -5,7 +5,7 @@
   "exposable": true,
   "port": 8083,
   "id": "nextaio",
-  "tipi_version": 65,
+  "tipi_version": 66,
   "version": "25.0.13-apache",
   "categories": [
     "data"
@@ -34,21 +34,21 @@
       "type": "text",
       "label": "db name",
       "max": 50,
-      "min": 3,
+      "min": 1,
       "required": true,
       "env_variable": "NEXTCLOUD_AIO_DB_NAME"
     },{
       "type": "text",
       "label": "db host",
       "max": 50,
-      "min": 3,
+      "min": 1,
       "required": true,
       "env_variable": "NEXTCLOUD_AIO_DB_HOST"
     },{
       "type": "text",
       "label": "db user",
       "max": 50,
-      "min": 3,
+      "min": 1,
       "required": true,
       "env_variable": "NEXTCLOUD_AIO_DB_USER"
     },
@@ -56,7 +56,7 @@
       "type": "password",
       "label": "DB pass",
       "max": 50,
-      "min": 10,
+      "min": 1,
       "required": true,
       "env_variable": "NEXTCLOUD_AIO_DB_PASS"
     }
