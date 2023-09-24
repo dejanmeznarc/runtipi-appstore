@@ -40,7 +40,7 @@
       "env_variable": "NEXTCLOUD_AIO_DATABASE_USER"
     },
     {
-      "type": "Password",
+      "type": "password",
       "label": "MYSQL pass",
       "max": 50,
       "min": 1,
