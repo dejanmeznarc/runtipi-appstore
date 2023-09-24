@@ -1,4 +1,4 @@
-## A safe home for all your data. AIO
+## A safe home for all your data.
 
 * 📁 **Access your Data** You can store your files, contacts, calendars and more on a server of your choosing.
 * 🔄 **Sync your Data** You keep your files, contacts, calendars and more synchronized amongst your devices.
