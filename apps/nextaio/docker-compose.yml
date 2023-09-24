@@ -22,7 +22,6 @@ services:
       - TRUSTED_PROXIES=172.16.0.0/12
       - OVERWRITEPROTOCOL=${APP_PROTOCOL:-http}
     depends_on:
-      - db-nextcloud
       - redis-nextcloud
     networks:
       - tipi_main_network
@@ -46,18 +45,6 @@ services:
       traefik.http.middlewares.nextcloud-https.redirectscheme.scheme: https
       traefik.http.routers.nextcloud-http.middlewares: nextcloud-https@docker
 
-  db-nextcloud:
-    container_name: db-nextcloud
-    image: postgres:14.2
-    restart: on-failure
-    volumes:
-      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_PASSWORD=tipi
-      - POSTGRES_USER=tipi
-      - POSTGRES_DB=nextcloud
-    networks:
-      - tipi_main_network
 
   redis-nextcloud:
     container_name: redis-nextcloud
@@ -76,7 +63,6 @@ services:
       - ${APP_DATA_DIR}/data/nextcloud:/var/www/html
     entrypoint: /cron.sh
     depends_on:
-      - db-nextcloud
       - redis-nextcloud
     networks:
       - tipi_main_network
